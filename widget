@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Código del Oro</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    header {
+      background-color: #161b22;
+      padding: 20px 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+      border-bottom: 1px solid #30363d;
+    }
+    header h1 {
+      margin: 0;
+      color: #f9d342;
+      font-size: 2rem;
+    }
+    header p {
+      margin-top: 8px;
+      font-size: 1rem;
+      color: #8b949e;
+    }
+    main {
+      height: calc(100vh - 100px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .tradingview-widget-container {
+      height: 90%;
+      width: 95%;
+      max-width: 1200px;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+      background-color: #161b22;
+    }
+    .tradingview-widget-copyright {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 0.8rem;
+    }
+    .tradingview-widget-copyright .blue-text {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>El Código del Oro</h1>
+    <p>Proyecciones en vivo con Ondas de Elliott</p>
+  </header>
+  <main>
+    <!-- Widget de TradingView COMIENZA -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright">
+        <a href="https://es.tradingview.com/" rel="noopener nofollow" target="_blank">
+          <span class="blue-text">Siga los mercados en TradingView</span>
+        </a>
+      </div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+      {
+        "autosize": true,
+        "symbol": "OANDA:XAUUSD",
+        "interval": "D",
+        "timezone": "Etc/UTC",
+        "theme": "dark",
+        "style": "1",
+        "locale": "es",
+        "allow_symbol_change": true,
+        "support_host": "https://www.tradingview.com"
+      }
+      </script>
+    </div>
+    <!-- Fin del widget TradingView -->
+  </main>
+</body>
+</html>
